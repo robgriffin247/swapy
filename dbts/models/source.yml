@@ -1,7 +1,10 @@
 version: 2
 sources:
-- name: staging
+- name: "{{ env_var('SCHEMA_STG') }}"
   description: Raw swapi data
-  schema: staging
+  schema: "{{ env_var('SCHEMA_STG') }}"
   tables:
   - name: stg_films
+    meta:
+      dagster:
+        asset_key: ["stg_films"] 

@@ -33,10 +33,9 @@ models:
   dbts:
     +database: swapi
     intermediate:
+      +meta:
+        dagster:
+          group: "{{ env_var('SCHEMA_INT') }}"
       +materialized: view
       +enabled: true
-      +schema: "{{ env_var('SCHEMA_INT') }}"    
-    core:
-      +materialized: view
-      +enabled: true
-      +schema: "{{ env_var('SCHEMA_COR') }}"
+      +schema: "{{ env_var('SCHEMA_INT') }}"

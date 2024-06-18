@@ -12,6 +12,10 @@ dagster-webserver = "^1.7.10"
 httpx = "^0.27.0"
 dagster-duckdb = "^0.23.10"
 dagster-duckdb-pandas = "^0.23.10"
+dbt = "^1.0.0.37.22"
+dbt-core = "^1.8.2"
+dbt-duckdb = "^1.8.1"
+dagster-dbt = "^0.23.10"
 
 
 [build-system]
