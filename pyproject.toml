@@ -17,3 +17,6 @@ dagster-duckdb-pandas = "^0.23.10"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.dagster]
+module_name = "dags"
