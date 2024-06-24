@@ -10,7 +10,7 @@ The aim of SWAPY is to create and deploy a data pipeline to extract data from [S
 - [x] dbt for transformation
 - [ ] Streamlit for deployment
 
-[swapy data pipeline diagram](./swapy_pipeline.png)
+![swapy data pipeline diagram](./swapy_pipeline.png)
 
 <!-- 
 Other components I might add at a later date:
