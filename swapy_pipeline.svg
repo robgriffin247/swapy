@@ -10,6 +10,9 @@
    xml:space="preserve"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    sodipodi:docname="swapy_pipeline.svg"
+   inkscape:export-filename="swapy_pipeline.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -360,6 +363,16 @@
            cx="147.62157"
            cy="174.88611"
            rx="39.054626"
-           ry="12.281328" /></g></g></g><style
+           ry="12.281328" /></g></g><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.88378px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:center;text-anchor:middle;opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#8b8b8b;stroke-width:0.0606747;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.12135, 0.0606747;stroke-dashoffset:0;stroke-opacity:1"
+       x="68.244553"
+       y="105.78592"
+       id="text30"><tspan
+         sodipodi:role="line"
+         id="tspan30"
+         style="fill:#f9f9f9;stroke-width:0.0606747"
+         x="68.244553"
+         y="105.78592">api_wan()</tspan></text></g><style
      type="text/css"
      id="style1">.st0{fill:#fff100}</style></svg>
