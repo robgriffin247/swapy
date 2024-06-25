@@ -96,7 +96,10 @@
        height="21.450945"
        x="10.458156"
        y="95.293152"
-       ry="2.157423" /><rect
+       ry="2.157423"
+       inkscape:export-filename="swapy_pipeline"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" /><rect
        style="font-variation-settings:normal;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#8b8b8b;stroke-width:0.265126;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        id="rect27"
        width="72.474472"
