@@ -12,6 +12,7 @@ The aim of SWAPY is to create and deploy a data pipeline to extract data from [S
 
 ![swapy data pipeline diagram](./swapy_pipeline.png)
 
+
 <!-- 
 Other components I might add at a later date:
 
