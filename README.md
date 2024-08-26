@@ -412,14 +412,14 @@ This (should) be everything and the pipeline can now be populated with more asse
 
 ## Deploy to Streamlit
 
-For this app, I have added, where resource is *people*, *planets* and *species* in intermediate:
+For this app, I have added, where resource is *people*, *planets* and *species*:
 
 - `./dags/assets/stg_*resource*.py`
-- `./dbts/models/intermediate/` ... `int_*resource*.sql` and `int_*resource*.yml`
 - `stg_*resource*` to `./dbts/models/source.yml`
-- `stg_*resource*` to `dags/definitions.py`.
-- `./dtbs/models/core/` ... `dim_*resource*.sql` and `dim_*resource*.yml`
+- `stg_*resource*` to `dags/definitions.py`
+- `./dbts/models/intermediate/` ... `int_*resource*.sql` and `int_*resource*.yml`
 - `core` to `dbt_project.yml`
+- `./dtbs/models/core/` ... `dim_*resource*.sql` and `dim_*resource*.yml`
 
 1. Open the poetry shell from the project root and install streamlit
 
@@ -432,8 +432,17 @@ For this app, I have added, where resource is *people*, *planets* and *species* 
 
     ```python
     import streamlit as st
+    import duckdb
 
-    st.write("hello, world!")
+
+    with duckdb.connect("data/swapi.duckdb") as con:
+    
+        st.dataframe(con.sql("""
+                        SELECT *
+                        FROM STAGING.STG_FILMS
+                        """).to_df(),
+                        hide_index=True)
+    
     ```
 
 1. Run the app and open in a browser
