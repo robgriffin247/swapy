@@ -1,10 +1,8 @@
 select
+    url as film_id,
     title,
     episode_id as episode,
-    opening_crawl,
-    director,
-    producer as producers,
-    release_date as release_date_us,
-    created as created_date,
-    edited as edited_date
+    characters,
+    planets, 
+    species
 from {{ source('staging', 'stg_films') }}

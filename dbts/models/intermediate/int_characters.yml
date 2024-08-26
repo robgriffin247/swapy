@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_characters
+    description: "Intermediate dataset of characters, changed from SWAPI name of people"
+    columns:
+      - name: character_id
+        description: "SWAPI URL used as a unique identifier"
+      - name: character
+        description: "Character name"
+      - name: height
+        description: "Character height"
+      - name: mass
+        description: "Character mass"
+      - name: gender
+        description: "Character gender"
+      - name: home_planet
+        description: "Home planet of the character"

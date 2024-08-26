@@ -1,8 +1,0 @@
-version: 2
-
-models:
-  - name: int_people
-    description: "Intermediate dataset of people"
-    columns:
-      - name: name
-        description: "Character name"

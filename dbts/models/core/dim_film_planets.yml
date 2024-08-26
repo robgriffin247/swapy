@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_film_planets
+    description: "Listing of all planets featured in each film"
+    columns:
+      - name: Film
+        description: "Title of the film"
+      - name: Planet
+        description: "Name of the Planet"

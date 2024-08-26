@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_characters
+    description: "Production dataset of characters"
+    columns:
+      - name: character
+        description: "Character name"
+      - name: height
+        description: "Character height"
+      - name: mass
+        description: "Character mass"
+      - name: gender
+        description: "Character gender"
+      - name: home_planet
+        description: "Home planet of the character"

@@ -4,19 +4,15 @@ models:
   - name: int_films
     description: "Intermediate dataset of films"
     columns:
+      - name: film_id
+        description: "SWAPI URL used as a unqiue identifier"
       - name: title
         description: "Film title"
-      - name: episode_id
+      - name: episode
         description: "Episode number"
-      - name: opening_crawl
-        description: "Text of the opening scene setting crawl that occurs at the start of the movie"
-      - name: director
-        description: "Director(s) of the film, comma separated if >1"
-      - name: producers
-        description: "Producer(s) of the film, comma separated if >1"
-      - name: release_date_us
-        description: "Date of film release in US, formatted as yyyy-mm-dd"
-      - name: created_date
-        description: "Date record was created in SWAPI, formatted as yyyy-mm-ddThh:mmm:ss"
-      - name: edited_date
-        description: "Date record was last edited in SWAPI, formatted as yyyy-mm-ddThh:mm:ss"
+      - name: characters
+        description: "Characters that appeared in each film"
+      - name: planets
+        description: "Planets that appeared in each film"
+      - name: species
+        description: "Species that appeared in each film"

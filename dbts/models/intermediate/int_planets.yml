@@ -4,5 +4,11 @@ models:
   - name: int_planets
     description: "Intermediate dataset of planets"
     columns:
-      - name: edited_date
-        description: "Date record was last edited in SWAPI, formatted as yyyy-mm-ddThh:mm:ss"
+      - name: planet_id
+        description: "SWAPI URL as unique identifier"
+      - name: planet
+        description: "Name of the planet"
+      - name: diameter
+        description: "Diameter of the planet"
+      - name: population
+        description: "Number of inhabitants"
