@@ -448,3 +448,11 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 1. Run the app and open in a browser
     
     ```streamlit run app.py```
+
+
+<!-- 
+TODO:
+continue building models to take films, people, planets and species to production ready datasets
+create dim_film_characters, dim_film_species and dim_film_planets, where each row records the name of a character/species/planet in each film
+include other attributes such as character height that will allow getting average height per film etc.
+-->
