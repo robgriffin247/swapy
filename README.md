@@ -2,7 +2,7 @@
 
 <br/>
 
-**The aim of SWAPY is to create and deploy a data pipeline to extract data from [SWAPI](https://swapi.dev), load it to a database, and transform data into production ready datasets.** In doing so, it demonstrates the use of several data stack components whilst maintaining a philosophy of minimising complexity &mdash; there is enough going on in the pipeline to integrate all the components, but not more. It is a Python-based project which includes:
+**The aim of SWAPY is to create and deploy a data pipeline to extract data from [SWAPI](https://swapi.dev), load it to a database, and transform data into production ready datasets.** In doing so, it demonstrates the use of several data stack components whilst maintaining a philosophy of minimising complexity &mdash; there is enough going on in the pipeline to integrate and demonstrate all the components, but not more. It is a Python-based project which includes:
 
 - [x] Git for version control
 - [x] Poetry for dependency management
