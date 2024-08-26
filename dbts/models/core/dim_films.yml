@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: dim_films
+    description: "Production dataset of films"

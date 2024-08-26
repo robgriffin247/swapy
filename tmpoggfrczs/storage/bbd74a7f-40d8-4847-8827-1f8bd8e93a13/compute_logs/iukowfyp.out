@@ -1,0 +1,35 @@
+Getting https://swapi.dev/api/species
+Getting https://swapi.dev/api/species/?page=2
+Getting https://swapi.dev/api/species/?page=3
+Getting https://swapi.dev/api/species/?page=4
+┌────────────────┬────────────────┬───┬──────────────────────┬──────────────────────┬──────────────────────┐
+│      name      │ classification │ … │       created        │        edited        │         url          │
+│    varchar     │    varchar     │   │       varchar        │       varchar        │       varchar        │
+├────────────────┼────────────────┼───┼──────────────────────┼──────────────────────┼──────────────────────┤
+│ Human          │ mammal         │ … │ 2014-12-10T13:52:1…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Droid          │ artificial     │ … │ 2014-12-10T15:16:1…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Wookie         │ mammal         │ … │ 2014-12-10T16:44:3…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Rodian         │ sentient       │ … │ 2014-12-10T17:05:2…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Hutt           │ gastropod      │ … │ 2014-12-10T17:12:5…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Yoda's species │ mammal         │ … │ 2014-12-15T12:27:2…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Trandoshan     │ reptile        │ … │ 2014-12-15T13:07:4…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Mon Calamari   │ amphibian      │ … │ 2014-12-18T11:09:5…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Ewok           │ mammal         │ … │ 2014-12-18T11:22:0…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Sullustan      │ mammal         │ … │ 2014-12-18T11:26:2…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│     ·          │   ·            │ · │          ·           │          ·           │          ·           │
+│     ·          │   ·            │ · │          ·           │          ·           │          ·           │
+│     ·          │   ·            │ · │          ·           │          ·           │          ·           │
+│ Geonosian      │ insectoid      │ … │ 2014-12-20T16:40:4…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Mirialan       │ mammal         │ … │ 2014-12-20T16:46:4…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Clawdite       │ reptilian      │ … │ 2014-12-20T16:57:4…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Besalisk       │ amphibian      │ … │ 2014-12-20T17:28:2…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Kaminoan       │ amphibian      │ … │ 2014-12-20T17:31:2…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Skakoan        │ mammal         │ … │ 2014-12-20T17:53:5…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Muun           │ mammal         │ … │ 2014-12-20T17:58:1…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Togruta        │ mammal         │ … │ 2014-12-20T18:44:0…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Kaleesh        │ reptile        │ … │ 2014-12-20T19:45:4…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+│ Pau'an         │ mammal         │ … │ 2014-12-20T20:35:0…  │ 2014-12-20T21:36:4…  │ https://swapi.dev/…  │
+├────────────────┴────────────────┴───┴──────────────────────┴──────────────────────┴──────────────────────┤
+│ 37 rows (20 shown)                                                                  15 columns (5 shown) │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

@@ -39,3 +39,10 @@ models:
       +materialized: view
       +enabled: true
       +schema: "{{ env_var('SCHEMA_INT') }}"
+    core:
+      +meta:
+        dagster:
+          group: "{{ env_var('SCHEMA_COR') }}"
+      +materialized: view
+      +enabled: true
+      +schema: "{{ env_var('SCHEMA_COR') }}"

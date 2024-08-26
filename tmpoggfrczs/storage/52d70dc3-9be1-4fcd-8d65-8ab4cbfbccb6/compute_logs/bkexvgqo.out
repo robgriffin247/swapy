@@ -1,0 +1,23 @@
+Running with dbt=1.8.2
+Registered adapter: duckdb=1.8.1
+Found 4 models, 4 sources, 406 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START sql view model main_intermediate.int_people ....................... [RUN]
+1 of 1 ERROR creating sql view model main_intermediate.int_people .............. [[31mERROR[0m in 0.14s]
+
+Finished running 1 view model in 0 hours 0 minutes and 0.47 seconds (0.47s).
+
+[31mCompleted with 1 error and 0 warnings:[0m
+
+  Runtime Error in model int_people (models/intermediate/int_people.sql)
+  Binder Error: No function matches the given name and argument types 'from_json(VARCHAR[])'. You might need to add explicit type casts.
+  	Candidate functions:
+  	from_json(VARCHAR, VARCHAR) -> ANY
+  	from_json(JSON, VARCHAR) -> ANY
+  
+  LINE 7:     unnest(from_json(films))
+                     ^
+
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1

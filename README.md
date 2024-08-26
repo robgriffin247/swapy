@@ -303,7 +303,7 @@ At this point, the data pipeline has a start point &mdash; the films data from S
     ```
 
 1. Delete the `models/example` folder
-
+    
 1. `cd` to `dbts` and run `dbt build` &mdash; this should create the `int_films` in the database
 
 
@@ -408,3 +408,34 @@ At this point, the data pipeline has a start point &mdash; the films data from S
 <br/>
 
 This (should) be everything and the pipeline can now be populated with more assets as needed. At this point, it is a working example of a barebones data pipeline taking raw SWAPI data into a DuckDB database using dbt for transformation and Dagster for orchestration.
+
+
+## Deploy to Streamlit
+
+For this app, I have added, where resource is *people*, *planets* and *species* in intermediate:
+
+- `./dags/assets/stg_*resource*.py`
+- `./dbts/models/intermediate/` ... `int_*resource*.sql` and `int_*resource*.yml`
+- `stg_*resource*` to `./dbts/models/source.yml`
+- `stg_*resource*` to `dags/definitions.py`.
+- `./dtbs/models/core/` ... `dim_*resource*.sql` and `dim_*resource*.yml`
+- `core` to `dbt_project.yml`
+
+1. Open the poetry shell from the project root and install streamlit
+
+    ```bash
+    poetry shell
+    poetry add streamlit
+    ```
+
+1. Create an `app.py` file
+
+    ```python
+    import streamlit as st
+
+    st.write("hello, world!")
+    ```
+
+1. Run the app and open in a browser
+    
+    ```streamlit run app.py```

@@ -1,0 +1,14 @@
+Running with dbt=1.8.2
+Registered adapter: duckdb=1.8.1
+Found 4 models, 4 sources, 406 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START sql view model main_intermediate.int_people ....................... [RUN]
+1 of 1 OK created sql view model main_intermediate.int_people .................. [[32mOK[0m in 0.17s]
+
+Finished running 1 view model in 0 hours 0 minutes and 0.45 seconds (0.45s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1

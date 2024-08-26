@@ -12,8 +12,8 @@ from dagster_dbt import (
 import warnings
 warnings.filterwarnings("ignore", category=ExperimentalWarning) 
 
-from dags.assets import stg_films
-staging_assets = load_assets_from_modules([stg_films])
+from dags.assets import stg_films, stg_people, stg_planets, stg_species
+staging_assets = load_assets_from_modules([stg_films, stg_people, stg_planets, stg_species])
 
 
 RELATIVE_PATH_TO_MY_DBT_PROJECT = "../dbts"

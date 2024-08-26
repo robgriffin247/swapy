@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_planets
+    description: "Intermediate dataset of planets"
+    columns:
+      - name: edited_date
+        description: "Date record was last edited in SWAPI, formatted as yyyy-mm-ddThh:mm:ss"

@@ -1,10 +1,37 @@
 version: 2
 sources:
 - name: "{{ env_var('SCHEMA_STG') }}"
-  description: Raw swapi data
+  description: Raw swapi film data
   schema: "{{ env_var('SCHEMA_STG') }}"
   tables:
   - name: stg_films
     meta:
       dagster:
         asset_key: ["stg_films"] 
+        
+- name: "{{ env_var('SCHEMA_STG') }}"
+  description: Raw swapi people data
+  schema: "{{ env_var('SCHEMA_STG') }}"
+  tables:
+  - name: stg_people
+    meta:
+      dagster:
+        asset_key: ["stg_people"]
+
+- name: "{{ env_var('SCHEMA_STG') }}"
+  description: Raw swapi planet data
+  schema: "{{ env_var('SCHEMA_STG') }}"
+  tables:
+  - name: stg_planets
+    meta:
+      dagster:
+        asset_key: ["stg_planets"]
+
+- name: "{{ env_var('SCHEMA_STG') }}"
+  description: Raw swapi species data
+  schema: "{{ env_var('SCHEMA_STG') }}"
+  tables:
+  - name: stg_species
+    meta:
+      dagster:
+        asset_key: ["stg_species"]
