@@ -1,4 +1,15 @@
-select
-    character, height, mass, gender, 
-    planet as home_planet
-from {{ ref('int_characters') }} as c left join {{ ref('int_planets') }} as p on c.home_planet=p.planet_id
+WITH characters AS (
+    SELECT * FROM {{ ref("int_characters") }}
+),
+planets AS (
+    SELECT planet_id, planet FROM {{ ref("int_planets") }}
+)
+
+SELECT 
+    c.character_id, 
+    c.character,
+    c.height,
+    c.mass,
+    c.gender,
+    p.planet as homeworld
+FROM characters AS c LEFT JOIN planets AS p ON c.homeworld=p.planet_id
