@@ -1,0 +1,34 @@
+Running with dbt=1.8.2
+Registered adapter: duckdb=1.8.1
+Found 7 models, 4 sources, 406 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 7 START sql view model main_intermediate.int_characters ................... [RUN]
+1 of 7 OK created sql view model main_intermediate.int_characters .............. [[32mOK[0m in 0.27s]
+2 of 7 START sql view model main_intermediate.int_films ........................ [RUN]
+2 of 7 OK created sql view model main_intermediate.int_films ................... [[32mOK[0m in 0.12s]
+3 of 7 START sql view model main_intermediate.int_planets ...................... [RUN]
+3 of 7 OK created sql view model main_intermediate.int_planets ................. [[32mOK[0m in 0.13s]
+4 of 7 START sql view model main_intermediate.int_species ...................... [RUN]
+4 of 7 OK created sql view model main_intermediate.int_species ................. [[32mOK[0m in 0.14s]
+5 of 7 START sql view model main_core.dim_film_characters ...................... [RUN]
+5 of 7 ERROR creating sql view model main_core.dim_film_characters ............. [[31mERROR[0m in 0.08s]
+6 of 7 START sql view model main_core.dim_films ................................ [RUN]
+6 of 7 OK created sql view model main_core.dim_films ........................... [[32mOK[0m in 0.12s]
+7 of 7 START sql view model main_core.dim_characters ........................... [RUN]
+7 of 7 OK created sql view model main_core.dim_characters ...................... [[32mOK[0m in 0.14s]
+
+Finished running 7 view models in 0 hours 0 minutes and 1.53 seconds (1.53s).
+
+[31mCompleted with 1 error and 0 warnings:[0m
+
+  Runtime Error in model dim_film_characters (models/core/dim_film_characters.sql)
+  Binder Error: Values list "f" does not have a column named "episode"
+  LINE 12: SELECT f.title, f.episode, f.release_date, c.character, c.height, c.mass, c.gender, c.homeworld
+  FROM films AS f LEFT JOIN characters AS c ON f.character_id=c.character_id
+    );
+  ...
+                           ^
+
+Done. PASS=6 WARN=0 ERROR=1 SKIP=0 TOTAL=7

@@ -13,6 +13,6 @@ models:
       - name: mass
         description: "Character mass"
       - name: gender
-        description: "Character gender"
+        description: "Character gender, formatted"
       - name: home_planet
         description: "Home planet of the character"

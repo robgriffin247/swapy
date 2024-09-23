@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_film_characters
+    description: "Productuion dataset of characters per film, unnesting characters in int_films and merging in data"
+    columns:
+      - name: title
+        description: "Film title"
+      - name: episode
+        description: "Episode number"
+      - name: release_date
+        description: "Date of release (US)"
+      - name: character
+        description: "Character name"
+      - name: height
+        description: "Character height"
+      - name: mass
+        description: "Character mass"
+      - name: gender
+        description: "Character gender"
+      - name: homeworld
+        description: "Homeworld of the character decoded by int_planets.planet_id"

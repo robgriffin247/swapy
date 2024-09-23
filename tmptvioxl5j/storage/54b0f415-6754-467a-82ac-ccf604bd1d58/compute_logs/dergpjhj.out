@@ -1,0 +1,15 @@
+Getting https://swapi.dev/api/films
+┌──────────────────────┬────────────┬──────────────────────┬───┬──────────────────────┬──────────────────────┐
+│        title         │ episode_id │    opening_crawl     │ … │        edited        │         url          │
+│       varchar        │   int64    │       varchar        │   │       varchar        │       varchar        │
+├──────────────────────┼────────────┼──────────────────────┼───┼──────────────────────┼──────────────────────┤
+│ A New Hope           │          4 │ It is a period of …  │ … │ 2014-12-20T19:49:4…  │ https://swapi.dev/…  │
+│ The Empire Strikes…  │          5 │ It is a dark time …  │ … │ 2014-12-15T13:07:5…  │ https://swapi.dev/…  │
+│ Return of the Jedi   │          6 │ Luke Skywalker has…  │ … │ 2014-12-20T09:48:3…  │ https://swapi.dev/…  │
+│ The Phantom Menace   │          1 │ Turmoil has engulf…  │ … │ 2014-12-20T10:54:0…  │ https://swapi.dev/…  │
+│ Attack of the Clones │          2 │ There is unrest in…  │ … │ 2014-12-20T20:18:4…  │ https://swapi.dev/…  │
+│ Revenge of the Sith  │          3 │ War! The Republic …  │ … │ 2014-12-20T20:47:5…  │ https://swapi.dev/…  │
+├──────────────────────┴────────────┴──────────────────────┴───┴──────────────────────┴──────────────────────┤
+│ 6 rows                                                                                14 columns (5 shown) │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

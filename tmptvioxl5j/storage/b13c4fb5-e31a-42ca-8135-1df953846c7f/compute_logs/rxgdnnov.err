@@ -1,0 +1,50 @@
+[32m2024-09-23 20:03:34 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - 224478 - LOGS_CAPTURED - Started capturing logs in process (pid: 224478).
+[32m2024-09-23 20:03:35 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - 224478 - my_dbt_assets - STEP_START - Started execution of step "my_dbt_assets".
+[32m2024-09-23 20:03:35 +0200[0m - dagster - [34mINFO[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - my_dbt_assets - A dbt subsetted execution is being performed. Overriding default dbt selection arguments `['--select', 'fqn:*']` with arguments: `['dbts.core.dim_film_characters']`.
+[32m2024-09-23 20:03:36 +0200[0m - dagster - [34mINFO[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - my_dbt_assets - Copying `/mnt/c/Users/robgri/Documents/git_personal/swapy/dbts/target/partial_parse.msgpack` to `/mnt/c/Users/robgri/Documents/git_personal/swapy/dbts/target/my_dbt_assets-b13c4fb-b0a95dc/partial_parse.msgpack` to take advantage of partial parsing.
+[32m2024-09-23 20:03:36 +0200[0m - dagster - [34mINFO[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - my_dbt_assets - Running dbt command: `dbt build --select dbts.core.dim_film_characters`.
+[32m2024-09-23 20:03:40 +0200[0m - dagster - [34mINFO[0m - __ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - my_dbt_assets - Finished dbt command: `dbt build --select dbts.core.dim_film_characters`.
+[32m2024-09-23 20:03:40 +0200[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - b13c4fb5-e31a-42ca-8135-1df953846c7f - 224478 - my_dbt_assets - STEP_FAILURE - Execution of step "my_dbt_assets" failed.
+
+dagster_dbt.errors.DagsterDbtCliRuntimeError: The dbt CLI process with command
+
+`dbt build --select dbts.core.dim_film_characters`
+
+failed with exit code `1`. Check the stdout in the Dagster compute logs for the full information about the error, or view the dbt debug log: /mnt/c/Users/robgri/Documents/git_personal/swapy/dbts/target/my_dbt_assets-b13c4fb-b0a95dc/dbt.log.
+
+Errors parsed from dbt logs:
+
+  Runtime Error in model dim_film_characters (models/core/dim_film_characters.sql)
+  Binder Error: Values list "f" does not have a column named "episode"
+  LINE 12: SELECT f.title, f.episode, f.release_date, c.character, c.height, c.mass, c.gender, c.homeworld
+  FROM films AS f LEFT JOIN characters AS c ON f.character_id=c.character_id
+    );
+  ...
+                           ^
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/execute_plan.py", line 282, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/execute_step.py", line 501, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/execute_step.py", line 186, in _step_output_error_checked_user_event_sequence
+    for user_event in user_event_sequence:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/execute_step.py", line 91, in _process_asset_results_to_events
+    for user_event in user_event_sequence:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute.py", line 195, in execute_core_compute
+    for step_output in _yield_compute_results(step_context, inputs, compute_fn, compute_context):
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute.py", line 164, in _yield_compute_results
+    for event in iterate_with_context(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_utils/__init__.py", line 468, in iterate_with_context
+    next_output = next(iterator)
+  File "/mnt/c/Users/robgri/Documents/git_personal/swapy/dags/definitions.py", line 30, in my_dbt_assets
+    yield from dbt.cli(["build"], context=context).stream()
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster_dbt/core/resources_v2.py", line 1068, in __next__
+    return next(self._inner_iterator)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster_dbt/core/resources_v2.py", line 568, in _stream_asset_events
+    for event in self.stream_raw_events():
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster_dbt/core/resources_v2.py", line 665, in stream_raw_events
+    self._raise_on_error()
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster_dbt/core/resources_v2.py", line 747, in _raise_on_error
+    raise error
+[0m

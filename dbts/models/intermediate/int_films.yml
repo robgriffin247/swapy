@@ -10,6 +10,8 @@ models:
         description: "Film title"
       - name: episode
         description: "Episode number"
+      - name: release_date
+        description: "Date of release (US)"
       - name: characters
         description: "Characters that appeared in each film"
       - name: planets

@@ -4,7 +4,10 @@ WITH characters AS (
         name as character,
         height,
         mass,
-        gender,
+        CASE WHEN gender = 'male' THEN 'Male' 
+            WHEN gender = 'female' THEN 'Female' 
+            WHEN gender = 'hermaphrodite' THEN 'Hermaphrodite' 
+            ELSE NULL END as gender,
         homeworld
     from {{ source('staging', 'stg_people') }}
 )

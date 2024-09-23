@@ -1,0 +1,20 @@
+Running with dbt=1.8.2
+Registered adapter: duckdb=1.8.1
+Found 7 models, 4 sources, 406 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START sql view model main_intermediate.int_characters ................... [RUN]
+1 of 1 ERROR creating sql view model main_intermediate.int_characters .......... [[31mERROR[0m in 0.16s]
+
+Finished running 1 view model in 0 hours 0 minutes and 0.62 seconds (0.62s).
+
+[31mCompleted with 1 error and 0 warnings:[0m
+
+  Runtime Error in model int_characters (models/intermediate/int_characters.sql)
+  Binder Error: Referenced column "male" not found in FROM clause!
+  Candidate bindings: "stg_people.name", "stg_people.mass", "stg_people.url"
+  LINE 11:         CASE WHEN gender = "male" THEN "Male" 
+                                      ^
+
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1

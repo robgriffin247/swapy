@@ -1,33 +1,38 @@
 import streamlit as st
 import duckdb
+import plotly.express as px
+
 
 st.header("SWAPY")
 
-st.write("SWAPI data explorer built using Python, Dagster, dbt and Streamlit")
-
-
 with duckdb.connect("data/swapi.duckdb") as con:
+    # BACKEND ==============================================================================
+    film_gender_counts = con.sql("""SELECT TITLE, GENDER, COUNT(*) AS N
+                                  FROM MAIN_CORE.DIM_FILM_CHARACTERS
+                                  WHERE GENDER NOT IN ('none', 'n/a')
+                                  GROUP BY RELEASE_DATE, TITLE, GENDER
+                                  ORDER BY RELEASE_DATE, TITLE""").to_df()
+
+    plot_gender = px.bar(film_gender_counts,
+                        x="title", y="N", color="gender",
+                        labels={"title":"Film (oldest to newest)", "N":"Number of Characters", "gender":"Gender"})
     
-    int_films = con.sql("""SELECT * FROM MAIN_INTERMEDIATE.INT_FILMS""").to_df()
-    int_characters = con.sql("""SELECT * FROM MAIN_INTERMEDIATE.INT_CHARACTERS""").to_df()
-    int_planets = con.sql("""SELECT * FROM MAIN_INTERMEDIATE.INT_PLANETS""").to_df()
 
-    dim_films = con.sql("""SELECT * FROM MAIN_CORE.DIM_FILMS""").to_df()
-    dim_characters = con.sql("""SELECT * FROM MAIN_CORE.DIM_CHARACTERS""").to_df()
+                                  
+    film_homeworld_counts = con.sql("""SELECT TITLE, HOMEWORLD, COUNT(*) AS N
+                                  FROM MAIN_CORE.DIM_FILM_CHARACTERS
+                                  GROUP BY RELEASE_DATE, TITLE, HOMEWORLD
+                                  HAVING N>=2
+                                  ORDER BY RELEASE_DATE, TITLE""").to_df()
 
-    st.subheader("INT_FILMS")
-    st.dataframe(int_films)
-
-    st.subheader("INT_CHARACTERS")
-    st.dataframe(int_characters)
-
-    st.subheader("INT_PLANETS")
-    st.dataframe(int_planets)
-
-    st.subheader("DIM_FILMS")
-    st.dataframe(dim_films)
-
-    st.subheader("DIM_CHARACTERS")
-    st.dataframe(dim_characters)
+    plot_homeworld = px.bar(film_homeworld_counts,
+                        x="title", y="N", color="homeworld",
+                        labels={"title":"Film (oldest to newest)", "N":"Number of Characters", "homeworld":"Planet"})
     
+    # FRONTEND =============================================================================
+    st.subheader("How many characters per film, split by gender")
+    st.plotly_chart(plot_gender)    
     
+    st.subheader("How many characters per film, split by home planet (planets with >1 representants)")
+    st.plotly_chart(plot_homeworld)
+
