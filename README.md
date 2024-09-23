@@ -8,18 +8,17 @@
 - [x] Poetry for dependency management
 - [x] Dagster for orchestration
 - [x] dbt for transformation
-- [x] Streamlit app (basic added, but not doing anything meaningful yet)
+- [x] Streamlit app (just some basic vis)
 
 ![swapy data pipeline diagram](./swapy_pipeline.png)
 
 
-<!-- 
-Other components I might add at a later date:
+Other changes/components I might add at a later date:
 
 - dlt for extract/load
-- GitHub actions for deployment
 - OpenMetadata for data governance
--->
+- Deployment to Snowflake/Streamlit app
+- Addition of refresh scheduling in dagster
 
 <br/>
 
@@ -449,11 +448,3 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
     
     ```streamlit run app.py```
 
-
-<!-- 
-TODO:
-continue building models to take films, people, planets and species to production ready datasets
-create dim_film_characters, dim_film_species and dim_film_planets, where each row records the name of a character/species/planet in each film
-include other attributes such as character height that will allow getting average height per film etc.
-add yml files
--->

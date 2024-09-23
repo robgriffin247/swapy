@@ -1,5 +1,0 @@
-[32m2024-09-23 16:52:14 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 54b0f415-6754-467a-82ac-ccf604bd1d58 - 147099 - LOGS_CAPTURED - Started capturing logs in process (pid: 147099).
-[32m2024-09-23 16:52:14 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 54b0f415-6754-467a-82ac-ccf604bd1d58 - 147099 - stg_planets - STEP_START - Started execution of step "stg_planets".
-[32m2024-09-23 16:52:17 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 54b0f415-6754-467a-82ac-ccf604bd1d58 - 147099 - stg_planets - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
-[32m2024-09-23 16:52:18 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 54b0f415-6754-467a-82ac-ccf604bd1d58 - 147099 - stg_planets - ASSET_MATERIALIZATION - Materialized value stg_planets.
-[32m2024-09-23 16:52:18 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 54b0f415-6754-467a-82ac-ccf604bd1d58 - 147099 - stg_planets - STEP_SUCCESS - Finished execution of step "stg_planets" in 3.19s.
