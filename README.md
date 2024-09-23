@@ -8,7 +8,7 @@
 - [x] Poetry for dependency management
 - [x] Dagster for orchestration
 - [x] dbt for transformation
-- [ ] Streamlit for deployment
+- [x] Streamlit app (basic added, but not doing anything meaningful yet)
 
 ![swapy data pipeline diagram](./swapy_pipeline.png)
 
