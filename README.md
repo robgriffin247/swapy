@@ -2,6 +2,31 @@
 
 <br/>
 
+## Clone and run SWAPY
+
+```bash
+# CLONE THE PROJECT
+git clone git@github.com:robgriffin247/swapy.git
+# > enter passcode
+cd swapy
+
+# SETUP THE PROJECT
+echo "DUCKDB_PATH=data/swapi.duckdb" >> .env
+echo "SCHEMA_STG=staging" >> .env
+echo "SCHEMA_INT=intermediate" >> .env
+echo "SCHEMA_COR=core" >> .env
+poetry install
+
+# RUN THE PROJECT
+poetry shell
+dagster dev -f dags/definitions.py
+# Open http://127.0.0.1:3000 and materialise assets
+streamlit run app.py
+# Open http://localhost:8501 to view the app
+```
+
+## Creating SWAPY 
+
 **The aim of SWAPY is to create and deploy a data pipeline to extract data from [SWAPI](https://swapi.dev), load it to a database, and transform data into production ready datasets.** In doing so, it demonstrates the use of several data stack components whilst maintaining a philosophy of minimising complexity &mdash; there is enough going on in the pipeline to integrate and demonstrate all the components, but not more. It is a Python-based project which includes:
 
 - [x] Git for version control
