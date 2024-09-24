@@ -58,8 +58,6 @@ Other changes/components I might add at a later date:
 
 <br/>
 
-
-
 ## Start up
 
 The first components to implement are version control and dependency management via git, github and poetry.
