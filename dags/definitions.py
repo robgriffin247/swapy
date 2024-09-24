@@ -1,6 +1,7 @@
 from pathlib import Path
 
-from dagster import AssetExecutionContext, Definitions, load_assets_from_modules, ExperimentalWarning
+from dagster import AssetExecutionContext, Definitions, load_assets_from_modules, ExperimentalWarning, DefaultScheduleStatus
+
 from dagster_dbt import (
     DbtCliResource,
     DbtProject,
@@ -35,6 +36,7 @@ dbt_assets_schedule = build_schedule_from_dbt_selection(
     job_name="materialize_dbt_models",
     cron_schedule="10/30 * * * *",
     dbt_select="fqn:*",
+    default_status=DefaultScheduleStatus.RUNNING
 )
 
 defs = Definitions(
