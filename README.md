@@ -1,8 +1,7 @@
 # SWAPY
 
-<br/>
 
-## Clone and run SWAPY
+## TL;DR &mdash; Clone and Run SWAPY
 
 ```bash
 # CLONE THE PROJECT
@@ -25,6 +24,11 @@ streamlit run app.py
 # Open http://localhost:8501 to view the app
 ```
 
+<br/>
+
+
+
+
 ## Creating SWAPY 
 
 **The aim of SWAPY is to create and deploy a data pipeline to extract data from [SWAPI](https://swapi.dev), load it to a database, and transform data into production ready datasets.** In doing so, it demonstrates the use of several data stack components whilst maintaining a philosophy of minimising complexity &mdash; there is enough going on in the pipeline to integrate and demonstrate all the components, but not more. It is a Python-based project which includes:
@@ -46,6 +50,9 @@ Other changes/components I might add at a later date:
 - Addition of refresh scheduling in dagster
 
 <br/>
+
+
+
 
 ## Prerequisites
 
@@ -91,6 +98,8 @@ The first components to implement are version control and dependency management 
     ```
     
 <br/>
+
+
 
 
 ## Extract and load SWAPI data
@@ -152,6 +161,9 @@ The first components to implement are version control and dependency management 
     with duckdb.connect(f"{os.getenv('DUCKDB_PATH')}") as c:
         c.sql("show all tables").show()
     ```
+
+<br/>
+
 
 
 
@@ -226,6 +238,8 @@ The first components to implement are version control and dependency management 
 1. Materialise the dataset by clicking [Materialize](http://127.0.0.1:3000/asset-group) in the browser, and check it is in the database
 
 <br/>
+
+
 
 
 ## Extending the pipeline
@@ -326,7 +340,7 @@ At this point, the data pipeline has a start point &mdash; the films data from S
     
 1. `cd` to `dbts` and run `dbt build` &mdash; this should create the `int_films` in the database
 
-
+<br/>
 
 
 
@@ -429,6 +443,10 @@ At this point, the data pipeline has a start point &mdash; the films data from S
 
 This (should) be everything and the pipeline can now be populated with more assets as needed. At this point, it is a working example of a barebones data pipeline taking raw SWAPI data into a DuckDB database using dbt for transformation and Dagster for orchestration.
 
+<br/>
+
+
+
 
 ## Deploy to Streamlit
 
@@ -468,4 +486,7 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 1. Run the app and open in a browser
     
     ```streamlit run app.py```
+
+
+1. Continue to develop the streamlit app
 

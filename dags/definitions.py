@@ -30,16 +30,16 @@ def my_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     yield from dbt.cli(["build"], context=context).stream()
 
 
-my_schedule = build_schedule_from_dbt_selection(
+dbt_assets_schedule = build_schedule_from_dbt_selection(
     [my_dbt_assets],
     job_name="materialize_dbt_models",
-    cron_schedule="0 0 * * *",
+    cron_schedule="10/30 * * * *",
     dbt_select="fqn:*",
 )
 
 defs = Definitions(
     assets=staging_assets + [my_dbt_assets],
-    schedules=[my_schedule],
+    schedules=[dbt_assets_schedule],
     resources={
         "dbt": DbtCliResource(project_dir=my_project),
     },
