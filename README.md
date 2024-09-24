@@ -47,8 +47,6 @@ Other changes/components I might add at a later date:
 
 <br/>
 
-
-
 ## Prerequisites
 
 1. Install Python
