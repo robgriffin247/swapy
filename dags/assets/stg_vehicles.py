@@ -10,6 +10,7 @@ def stg_vehicles() -> None:
     url = f"https://swapi.dev/api/vehicles"
     content =  []
 
+
     while url != None:
 
         response = requests.get(url, timeout=90)

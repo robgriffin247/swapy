@@ -492,7 +492,7 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 
 
 
-
+  
 ## Adding dlt for ingestion
 
 1. `poetry add dlt`
