@@ -501,3 +501,4 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 
 1. CONT: adding as a dagster asset, define schema in duckdb etc.
 
+------
