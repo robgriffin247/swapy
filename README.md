@@ -490,3 +490,14 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 
 1. Continue to develop the streamlit app
 
+
+
+
+## Adding dlt for ingestion
+
+1. `poetry add dlt`
+
+1. Added code to get vehicles data
+
+1. CONT: adding as a dagster asset, define schema in duckdb etc.
+

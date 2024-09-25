@@ -12,7 +12,7 @@ def api_wan(resource):
 
         print(f"Getting {url}")
         response = httpx.get(url, timeout=90)
-        response.raise_for_status
+        response.raise_for_status()
         response_json = response.json()
 
         url = response_json["next"]
