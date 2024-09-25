@@ -20,10 +20,9 @@ pipeline = dlt.pipeline(
 )
 
 load_info = pipeline.run(
-    #response.json(),
     content,
-    table_name="issues",
-    write_disposition="replace" 
+    table_name="stg_vehicles",
+    write_disposition="replace",
 )
 
 print(load_info)

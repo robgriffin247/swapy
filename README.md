@@ -448,7 +448,7 @@ This (should) be everything and the pipeline can now be populated with more asse
 
 
 
-## Deploy to Streamlit
+## Create a Streamlit App
 
 For this app, I have added, where resource is *people*, *planets* and *species*:
 

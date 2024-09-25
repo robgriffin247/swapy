@@ -35,4 +35,3 @@ with duckdb.connect("data/swapi.duckdb") as con:
     
     st.subheader("How many characters per film, split by home planet (planets with >1 representants)")
     st.plotly_chart(plot_homeworld)
-
