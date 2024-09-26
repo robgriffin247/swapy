@@ -499,6 +499,6 @@ For this app, I have added, where resource is *people*, *planets* and *species*:
 
 1. Added code to get vehicles data
 
-1. CONT: adding as a dagster asset, define schema in duckdb etc.
+1. CONT: adding as a dagster asset, define schema in duckdb etc. update int_ and dim_ assets
 
 ------

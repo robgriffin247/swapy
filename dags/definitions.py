@@ -36,7 +36,7 @@ dbt_assets_schedule = build_schedule_from_dbt_selection(
     job_name="materialize_dbt_models",
     cron_schedule="10/30 * * * *",
     dbt_select="fqn:*",
-    default_status=DefaultScheduleStatus.RUNNING
+    #default_status=DefaultScheduleStatus.RUNNING
 )
 
 defs = Definitions(

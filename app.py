@@ -1,11 +1,18 @@
 import streamlit as st
 import duckdb
 import plotly.express as px
-
+import os
 
 st.header("SWAPY")
 
-with duckdb.connect("data/swapi.duckdb") as con:
+with duckdb.connect(os.getenv("DUCKDB_PATH")) as con:
+
+    st.write(con.sql("SHOW ALL TABLES"))
+
+    st.write(con.sql("SELECT * FROM STAGING.STG_FILMS"))
+        
+    st.write(con.sql("SELECT * FROM STAGING.STG_FILMS__CHARACTERS"))
+
     # BACKEND ==============================================================================
     film_gender_counts = con.sql("""SELECT TITLE, GENDER, COUNT(*) AS N
                                   FROM MAIN_CORE.DIM_FILM_CHARACTERS

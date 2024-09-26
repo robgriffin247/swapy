@@ -1,33 +1,40 @@
 # api_wan(): load raw swapi data to duckdb
-import httpx 
-import pandas as pd
 import os
+import dlt
+from dlt.sources.helpers import requests
 import duckdb
 
-def api_wan(resource):
+def api_wan(resource, drop=[]):
     url = f"https://swapi.dev/api/{resource}"
     content = [] 
 
     while url != None:
 
         print(f"Getting {url}")
-        response = httpx.get(url, timeout=90)
+        response = requests.get(url, timeout=90)
         response.raise_for_status()
         response_json = response.json()
 
         url = response_json["next"]
         content = content + [item for item in response_json["results"]]
 
-    df = pd.DataFrame.from_dict(content)
 
-    query = f"""
-            create or replace table {os.getenv('SCHEMA_STG')}.stg_{resource} as (
-                select
-                    *
-                from df
-            );
-        """
+    for d in drop:
+        for c in content:
+            c.pop(d, None)
+
+
+    pipeline = dlt.pipeline(
+        pipeline_name="swapi",
+        destination="duckdb",
+        dataset_name=f"{os.getenv('SCHEMA_STG')}"
+    )
+
+    pipeline.run(
+        content,
+        table_name=f"stg_{resource}",
+        write_disposition="replace"
+    )
+
     with duckdb.connect(f"{os.getenv('DUCKDB_PATH')}") as con:
-        con.sql(f"create schema if not exists {os.getenv('SCHEMA_STG')};")
-        con.sql(query)
         con.sql(f"select * from {os.getenv('SCHEMA_STG')}.stg_{resource}").show()

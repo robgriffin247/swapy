@@ -5,4 +5,4 @@ import os
 @asset(group_name=f"{os.getenv('SCHEMA_STG')}")
 def stg_species() -> None:
     """Raw species data from swapi api, json data stored as a table via a pandas dataframe"""
-    api_wan("species")
+    api_wan("species", drop=["people", "films"])
