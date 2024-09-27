@@ -10,7 +10,7 @@ git clone git@github.com:robgriffin247/swapy.git
 cd swapy
 
 # SETUP THE PROJECT
-echo "DUCKDB_PATH=data/swapi.duckdb" >> .env
+echo "DUCKDB_PATH=swapi.duckdb" >> .env
 echo "SCHEMA_STG=staging" >> .env
 echo "SCHEMA_INT=intermediate" >> .env
 echo "SCHEMA_COR=core" >> .env
@@ -19,7 +19,7 @@ poetry install
 # RUN THE PROJECT
 poetry shell
 dagster dev -f dags/definitions.py
-# Open http://127.0.0.1:3000 and materialise assets
+# Open http://127.0.0.1:3000 and materialise assets (Assets > View Global Asset Lineage > Materialize All; may need to do this stepwise - problems with lock on file since adding dlt)
 streamlit run app.py
 # Open http://localhost:8501 to view the app
 ```
