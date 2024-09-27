@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: dim_film_characters
-    description: "Production dataset of characters in each film"
+  - name: int_film_characters
+    description: "Intermediate dataset of characters in each film"
     columns:
       - name: film
         description: "Film title"

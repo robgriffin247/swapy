@@ -1,0 +1,35 @@
+Getting https://swapi.dev/api/vehicles
+Getting https://swapi.dev/api/vehicles/?page=2
+Getting https://swapi.dev/api/vehicles/?page=3
+Getting https://swapi.dev/api/vehicles/?page=4
+┌──────────────────────┬──────────────────────┬──────────────────────┬───┬────────────────────┬────────────────┐
+│         name         │        model         │     manufacturer     │ … │    _dlt_load_id    │    _dlt_id     │
+│       varchar        │       varchar        │       varchar        │   │      varchar       │    varchar     │
+├──────────────────────┼──────────────────────┼──────────────────────┼───┼────────────────────┼────────────────┤
+│ Sand Crawler         │ Digger Crawler       │ Corellia Mining Co…  │ … │ 1727349065.7460742 │ GHyK5kb6HVkrXw │
+│ T-16 skyhopper       │ T-16 skyhopper       │ Incom Corporation    │ … │ 1727349065.7460742 │ rO8XTINSB8GJKQ │
+│ X-34 landspeeder     │ X-34 landspeeder     │ SoroSuub Corporation │ … │ 1727349065.7460742 │ DkMRCYDwtweQ2w │
+│ TIE/LN starfighter   │ Twin Ion Engine/Ln…  │ Sienar Fleet Systems │ … │ 1727349065.7460742 │ qEMj1fu/JPPB3Q │
+│ Snowspeeder          │ t-47 airspeeder      │ Incom corporation    │ … │ 1727349065.7460742 │ HqFL9Gc6jpIZOQ │
+│ TIE bomber           │ TIE/sa bomber        │ Sienar Fleet Systems │ … │ 1727349065.7460742 │ 5ZYzmUzhVCICHg │
+│ AT-AT                │ All Terrain Armore…  │ Kuat Drive Yards, …  │ … │ 1727349065.7460742 │ IxK+hFJdbSREBQ │
+│ AT-ST                │ All Terrain Scout …  │ Kuat Drive Yards, …  │ … │ 1727349065.7460742 │ 7RzddxpN98osug │
+│ Storm IV Twin-Pod …  │ Storm IV Twin-Pod    │ Bespin Motors        │ … │ 1727349065.7460742 │ Q0keQfXzCxl/2w │
+│ Sail barge           │ Modified Luxury Sa…  │ Ubrikkian Industri…  │ … │ 1727349065.7460742 │ y01YX/UuHZ7evA │
+│     ·                │          ·           │          ·           │ · │         ·          │       ·        │
+│     ·                │          ·           │          ·           │ · │         ·          │       ·        │
+│     ·                │          ·           │          ·           │ · │         ·          │       ·        │
+│ Geonosian starfigh…  │ Nantex-class terri…  │ Huppla Pasa Tisc S…  │ … │ 1727349065.7460742 │ 5gJgGRyHEPNwyQ │
+│ Tsmeu-6 personal w…  │ Tsmeu-6 personal w…  │ Z-Gomot Ternbuell …  │ … │ 1727349065.7460742 │ 2O0NJ5zVzugKCQ │
+│ Emergency Firespee…  │ Fire suppression s…  │ unknown              │ … │ 1727349065.7460742 │ hsg/RALKT62btA │
+│ Droid tri-fighter    │ tri-fighter          │ Colla Designs, Phl…  │ … │ 1727349065.7460742 │ Bkz91A4xaBmhPQ │
+│ Oevvaor jet catama…  │ Oevvaor jet catama…  │ Appazanna Engineer…  │ … │ 1727349065.7460742 │ +Awua+yvvKXf/g │
+│ Raddaugh Gnasp flu…  │ Raddaugh Gnasp flu…  │ Appazanna Engineer…  │ … │ 1727349065.7460742 │ a5jN8Bn2U9NMfw │
+│ Clone turbo tank     │ HAVw A6 Juggernaut   │ Kuat Drive Yards     │ … │ 1727349065.7460742 │ VbgFYV0evguf+A │
+│ Corporate Alliance…  │ NR-N99 Persuader-c…  │ Techno Union         │ … │ 1727349065.7460742 │ UiCTEkiUAKGAEg │
+│ Droid gunship        │ HMP droid gunship    │ Baktoid Fleet Ordn…  │ … │ 1727349065.7460742 │ rPthdmdLWVZmuA │
+│ AT-RT                │ All Terrain Recon …  │ Kuat Drive Yards     │ … │ 1727349065.7460742 │ /FcQuoxSqRqq6A │
+├──────────────────────┴──────────────────────┴──────────────────────┴───┴────────────────────┴────────────────┤
+│ 78 rows (20 shown)                                                                      16 columns (5 shown) │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

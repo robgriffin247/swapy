@@ -1,0 +1,40 @@
+Getting https://swapi.dev/api/people
+Getting https://swapi.dev/api/people/?page=2
+Getting https://swapi.dev/api/people/?page=3
+Getting https://swapi.dev/api/people/?page=4
+Getting https://swapi.dev/api/people/?page=5
+Getting https://swapi.dev/api/people/?page=6
+Getting https://swapi.dev/api/people/?page=7
+Getting https://swapi.dev/api/people/?page=8
+Getting https://swapi.dev/api/people/?page=9
+┌────────────────────┬─────────┬─────────┬───┬──────────────────────┬───────────────────┬────────────────┐
+│        name        │ height  │  mass   │ … │         url          │   _dlt_load_id    │    _dlt_id     │
+│      varchar       │ varchar │ varchar │   │       varchar        │      varchar      │    varchar     │
+├────────────────────┼─────────┼─────────┼───┼──────────────────────┼───────────────────┼────────────────┤
+│ Luke Skywalker     │ 172     │ 77      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ /2YApdw2+N0QmA │
+│ C-3PO              │ 167     │ 75      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ MCIb/i3djVsyiA │
+│ R2-D2              │ 96      │ 32      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ FR0lCzRe0wbKRw │
+│ Darth Vader        │ 202     │ 136     │ … │ https://swapi.dev/…  │ 1727349067.509679 │ 0qLYKMro3XA3gg │
+│ Leia Organa        │ 150     │ 49      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ 2P3Z0kDqR3Fv+g │
+│ Owen Lars          │ 178     │ 120     │ … │ https://swapi.dev/…  │ 1727349067.509679 │ o0Ka5eEuzXV5Tg │
+│ Beru Whitesun lars │ 165     │ 75      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ oH0FQH0QDbn4hA │
+│ R5-D4              │ 97      │ 32      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ hGO9wPs8qd7xfg │
+│ Biggs Darklighter  │ 183     │ 84      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ wBkfU/+WCC0CEQ │
+│ Obi-Wan Kenobi     │ 182     │ 77      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ aBUgUdDKAbENrQ │
+│     ·              │  ·      │ ·       │ · │          ·           │         ·         │       ·        │
+│     ·              │  ·      │ ·       │ · │          ·           │         ·         │       ·        │
+│     ·              │  ·      │ ·       │ · │          ·           │         ·         │       ·        │
+│ Jocasta Nu         │ 167     │ unknown │ … │ https://swapi.dev/…  │ 1727349067.509679 │ OqOV/2gulmEtLw │
+│ R4-P17             │ 96      │ unknown │ … │ https://swapi.dev/…  │ 1727349067.509679 │ d11mhuS88dpMNg │
+│ Wat Tambor         │ 193     │ 48      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ jGl+5Ai6cnpnxg │
+│ San Hill           │ 191     │ unknown │ … │ https://swapi.dev/…  │ 1727349067.509679 │ k2PUkjAt/1rCMg │
+│ Shaak Ti           │ 178     │ 57      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ 797MKgsAlUZ4rQ │
+│ Grievous           │ 216     │ 159     │ … │ https://swapi.dev/…  │ 1727349067.509679 │ eWRzje+VWXZ80Q │
+│ Tarfful            │ 234     │ 136     │ … │ https://swapi.dev/…  │ 1727349067.509679 │ IgtZvIGK7cq3kQ │
+│ Raymus Antilles    │ 188     │ 79      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ 03qn4z7nY4+/4A │
+│ Sly Moore          │ 178     │ 48      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ q1/TZt8cs+mZOA │
+│ Tion Medon         │ 206     │ 80      │ … │ https://swapi.dev/…  │ 1727349067.509679 │ fxNAPt5O1GigmQ │
+├────────────────────┴─────────┴─────────┴───┴──────────────────────┴───────────────────┴────────────────┤
+│ 82 rows (20 shown)                                                                14 columns (6 shown) │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

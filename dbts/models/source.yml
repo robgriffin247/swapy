@@ -28,10 +28,10 @@ sources:
         asset_key: ["stg_planets"]
 
 - name: "{{ env_var('SCHEMA_STG') }}"
-  description: Raw swapi species data
+  description: Raw swapi film character appearance data (normalized by dlt)
   schema: "{{ env_var('SCHEMA_STG') }}"
   tables:
-  - name: stg_species
+  - name: stg_films__characters
     meta:
       dagster:
-        asset_key: ["stg_species"]
+        asset_key: ["stg_films__characters"]

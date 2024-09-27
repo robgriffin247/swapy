@@ -1,0 +1,35 @@
+Getting https://swapi.dev/api/species
+Getting https://swapi.dev/api/species/?page=2
+Getting https://swapi.dev/api/species/?page=3
+Getting https://swapi.dev/api/species/?page=4
+┌────────────────┬────────────────┬─────────────┬───┬──────────────────────┬─────────────────┬────────────────┐
+│      name      │ classification │ designation │ … │         url          │  _dlt_load_id   │    _dlt_id     │
+│    varchar     │    varchar     │   varchar   │   │       varchar        │     varchar     │    varchar     │
+├────────────────┼────────────────┼─────────────┼───┼──────────────────────┼─────────────────┼────────────────┤
+│ Human          │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ cwz7eSWKaJDq0Q │
+│ Droid          │ artificial     │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ p0jRq7VGZyuzHA │
+│ Wookie         │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ CpSr31CJCsebdA │
+│ Rodian         │ sentient       │ reptilian   │ … │ https://swapi.dev/…  │ 1727349092.8856 │ Vv7lX310Krfg8Q │
+│ Hutt           │ gastropod      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ UYjY6Rgw2cwc0w │
+│ Yoda's species │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ hIf63eeXE6tMrQ │
+│ Trandoshan     │ reptile        │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ 4LTICcHKRsw2Gw │
+│ Mon Calamari   │ amphibian      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ u1vFEPbkijfd9Q │
+│ Ewok           │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ NmZXFeq0SfJwdg │
+│ Sullustan      │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ 73cd55hGhSnm/w │
+│     ·          │   ·            │    ·        │ · │          ·           │        ·        │       ·        │
+│     ·          │   ·            │    ·        │ · │          ·           │        ·        │       ·        │
+│     ·          │   ·            │    ·        │ · │          ·           │        ·        │       ·        │
+│ Geonosian      │ insectoid      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ nx4hrHtcyHDAqQ │
+│ Mirialan       │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ yaV1KIJ7jwjz9Q │
+│ Clawdite       │ reptilian      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ bpUsK1EEvnqAHw │
+│ Besalisk       │ amphibian      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ B0yCgNZnumSccA │
+│ Kaminoan       │ amphibian      │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ u7xDgb3rxuoNSQ │
+│ Skakoan        │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ 7anBHsen/Ft9Mg │
+│ Muun           │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ E5M9E8fBBci83w │
+│ Togruta        │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ lUTh2ty3bVsV3g │
+│ Kaleesh        │ reptile        │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ JGIAF1Nr/pSumg │
+│ Pau'an         │ mammal         │ sentient    │ … │ https://swapi.dev/…  │ 1727349092.8856 │ S63//td5xnJRWA │
+├────────────────┴────────────────┴─────────────┴───┴──────────────────────┴─────────────────┴────────────────┤
+│ 37 rows (20 shown)                                                                     15 columns (6 shown) │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

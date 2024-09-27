@@ -6,13 +6,11 @@ models:
     columns:
       - name: character_id
         description: "SWAPI URL used as a unique identifier"
+      - name: character_dlt_id
+        description: "Identifier given by dlt"
       - name: character
         description: "Character name"
-      - name: height
-        description: "Character height"
-      - name: mass
-        description: "Character mass"
-      - name: gender
-        description: "Character gender, formatted"
-      - name: home_planet
+      - name: sex
+        description: "Character sex, formatted"
+      - name: homeworld
         description: "Home planet of the character"

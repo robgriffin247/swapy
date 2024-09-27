@@ -6,9 +6,7 @@ models:
     columns:
       - name: planet_id
         description: "SWAPI URL as unique identifier"
+      - name: planet_dlt_id
+        description: "dlt planet identifier"
       - name: planet
         description: "Name of the planet"
-      - name: diameter
-        description: "Diameter of the planet"
-      - name: population
-        description: "Number of inhabitants"

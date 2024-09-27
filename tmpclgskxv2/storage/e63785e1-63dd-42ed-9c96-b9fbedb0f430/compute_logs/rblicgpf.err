@@ -1,0 +1,59 @@
+[32m2024-09-26 13:11:04 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270269 - LOGS_CAPTURED - Started capturing logs in process (pid: 270269).
+[32m2024-09-26 13:11:04 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270269 - stg_species - STEP_START - Started execution of step "stg_species".
+[32m2024-09-26 13:11:06 +0200[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270269 - stg_species - STEP_FAILURE - Execution of step "stg_species" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "stg_species"::
+
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage sync with exception:
+
+<class 'dlt.destinations.exceptions.DestinationConnectionError'>
+Connection with DuckDbSqlClient to dataset name staging failed. Please check if you configured the credentials at all and provided the right credentials values. You can be also denied access or your internet connection may be down. The actual reason given is: IO Error: Could not set lock on file "/mnt/c/Users/robgri/Documents/git_personal/swapy/swapi.duckdb": Conflicting lock is held in /usr/bin/python3.10 (PID 270270). See also https://duckdb.org/docs/connect/concurrency
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_utils/__init__.py", line 468, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 141, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 129, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/mnt/c/Users/robgri/Documents/git_personal/swapy/dags/assets/stg_species.py", line 8, in stg_species
+    api_wan("species", drop=["people", "films"])
+  File "/mnt/c/Users/robgri/Documents/git_personal/swapy/api_wan/api_wan.py", line 33, in api_wan
+    pipeline.run(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 223, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 268, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 681, in run
+    self.sync_destination(destination, staging, dataset_name)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 177, in _wrap
+    rv = f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 811, in sync_destination
+    raise PipelineStepFailed(self, "sync", None, ex, None) from ex
+
+The above exception was caused by the following exception:
+dlt.destinations.exceptions.DestinationConnectionError: Connection with DuckDbSqlClient to dataset name staging failed. Please check if you configured the credentials at all and provided the right credentials values. You can be also denied access or your internet connection may be down. The actual reason given is: IO Error: Could not set lock on file "/mnt/c/Users/robgri/Documents/git_personal/swapy/swapi.duckdb": Conflicting lock is held in /usr/bin/python3.10 (PID 270270). See also https://duckdb.org/docs/connect/concurrency
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 742, in sync_destination
+    remote_state = self._restore_state_from_destination()
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 1483, in _restore_state_from_destination
+    with self._get_destination_clients(schema)[0] as job_client:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/destinations/job_client_impl.py", line 282, in __enter__
+    self.sql_client.open_connection()
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/destinations/sql_client.py", line 362, in _wrap
+    raise DestinationConnectionError(type(self).__name__, self.dataset_name, str(ex), ex)
+
+The above exception occurred during handling of the following exception:
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/mnt/c/Users/robgri/Documents/git_personal/swapy/swapi.duckdb": Conflicting lock is held in /usr/bin/python3.10 (PID 270270). See also https://duckdb.org/docs/connect/concurrency
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/destinations/sql_client.py", line 360, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/destinations/impl/duckdb/sql_client.py", line 59, in open_connection
+    self._conn = self.credentials.borrow_conn(read_only=self.credentials.read_only)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/destinations/impl/duckdb/configuration.py", line 46, in borrow_conn
+    self._conn = duckdb.connect(
+[0m

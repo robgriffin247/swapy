@@ -1,9 +1,7 @@
-select
-    url as film_id,
-    title,
-    episode_id as episode,
-    release_date--,
-    --characters,
-    --planets, 
-    --species
-from {{ source('staging', 'stg_films') }}
+SELECT  
+    url AS film_id,
+    _dlt_id AS film_dlt_id,
+    title AS film,
+    episode_id AS episode,
+    release_date
+FROM {{ source('staging', 'stg_films') }}

@@ -6,15 +6,11 @@ models:
     columns:
       - name: film_id
         description: "SWAPI URL used as a unqiue identifier"
-      - name: title
+      - name: film_dlt_id
+        description: "Identifier given by dlt"
+      - name: film
         description: "Film title"
       - name: episode
         description: "Episode number"
       - name: release_date
         description: "Date of release (US)"
-      #- name: characters
-      #  description: "Characters that appeared in each film"
-      #- name: planets
-      #  description: "Planets that appeared in each film"
-      #- name: species
-      #  description: "Species that appeared in each film"

@@ -1,0 +1,15 @@
+Getting https://swapi.dev/api/films
+┌──────────────────────┬────────────┬───┬──────────────────────┬───────────────────┬────────────────┐
+│        title         │ episode_id │ … │         url          │   _dlt_load_id    │    _dlt_id     │
+│       varchar        │   int64    │   │       varchar        │      varchar      │    varchar     │
+├──────────────────────┼────────────┼───┼──────────────────────┼───────────────────┼────────────────┤
+│ A New Hope           │          4 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ UgIvgd8Ho91OUA │
+│ The Empire Strikes…  │          5 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ Nt4dmfqYgQqPDg │
+│ Return of the Jedi   │          6 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ 9IGFAAxCC38wRQ │
+│ The Phantom Menace   │          1 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ 69JiApMf53vPoQ │
+│ Attack of the Clones │          2 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ V41S42pwaYtc6A │
+│ Revenge of the Sith  │          3 │ … │ https://swapi.dev/…  │ 1727348531.407808 │ ajcXAT/9NXWdag │
+├──────────────────────┴────────────┴───┴──────────────────────┴───────────────────┴────────────────┤
+│ 6 rows                                                                       11 columns (5 shown) │
+└───────────────────────────────────────────────────────────────────────────────────────────────────┘
+

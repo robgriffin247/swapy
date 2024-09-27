@@ -1,6 +1,5 @@
-select
-    url as planet_id,
-    name as planet,
-    diameter,
-    population
-from {{ source('staging', 'stg_planets') }}
+SELECT
+    url AS planet_id,
+    _dlt_id AS planet_dlt_id,
+    name AS planet
+FROM {{ source('staging', 'stg_planets') }}

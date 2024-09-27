@@ -1,0 +1,63 @@
+[32m2024-09-26 13:11:03 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270268 - LOGS_CAPTURED - Started capturing logs in process (pid: 270268).
+[32m2024-09-26 13:11:04 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270268 - stg_planets - STEP_START - Started execution of step "stg_planets".
+2024-09-26 13:11:06,464|[WARNING]|270268|140409128415680|dlt|logger.py|wrapper:25|The pipeline `run` method will now load the pending load packages. The data you passed to the run function will not be loaded. In order to do that you must run the pipeline again
+[32m2024-09-26 13:11:07 +0200[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - e63785e1-63dd-42ed-9c96-b9fbedb0f430 - 270268 - stg_planets - STEP_FAILURE - Execution of step "stg_planets" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "stg_planets"::
+
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage load when processing package 1727349065.7460742 with exception:
+
+<class 'dlt.common.storages.exceptions.LoadPackageNotFound'>
+Package with load id 1727349065.7460742 could not be found
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_utils/__init__.py", line 468, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 141, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 129, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/mnt/c/Users/robgri/Documents/git_personal/swapy/dags/assets/stg_planets.py", line 8, in stg_planets
+    api_wan("planets", drop=["residents", "films"])
+  File "/mnt/c/Users/robgri/Documents/git_personal/swapy/api_wan/api_wan.py", line 33, in api_wan
+    pipeline.run(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 223, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 268, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 695, in run
+    return self.load(destination, dataset_name, credentials=credentials)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 223, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 163, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 268, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 579, in load
+    raise PipelineStepFailed(
+
+The above exception was caused by the following exception:
+dlt.common.storages.exceptions.LoadPackageNotFound: Package with load id 1727349065.7460742 could not be found
+
+Stack Trace:
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/pipeline/pipeline.py", line 572, in load
+    runner.run_pool(load_step.config, load_step)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/common/runners/pool_runner.py", line 89, in run_pool
+    while _run_func():
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/common/runners/pool_runner.py", line 82, in _run_func
+    run_metrics = run_f.run(cast(TExecutor, pool))
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/load/load.py", line 637, in run
+    self.load_single_package(load_id, schema)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/load/load.py", line 570, in load_single_package
+    running_jobs, finalized_jobs, new_pending_exception = self.complete_jobs(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/load/load.py", line 445, in complete_jobs
+    self.create_followup_jobs(load_id, state, job, schema)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/load/load.py", line 325, in create_followup_jobs
+    all_jobs_states = self.load_storage.normalized_packages.list_all_jobs_with_states(
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/common/storages/load_package.py", line 379, in list_all_jobs_with_states
+    info = self.get_load_package_jobs(load_id)
+  File "/home/robgriffin247/.cache/pypoetry/virtualenvs/swapy-UjXh_wtJ-py3.10/lib/python3.10/site-packages/dlt/common/storages/load_package.py", line 578, in get_load_package_jobs
+    raise LoadPackageNotFound(load_id)
+[0m

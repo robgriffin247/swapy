@@ -1,0 +1,37 @@
+Getting https://swapi.dev/api/planets
+Getting https://swapi.dev/api/planets/?page=2
+Getting https://swapi.dev/api/planets/?page=3
+Getting https://swapi.dev/api/planets/?page=4
+Getting https://swapi.dev/api/planets/?page=5
+Getting https://swapi.dev/api/planets/?page=6
+┌──────────────┬─────────────────┬────────────────┬───┬──────────────────────┬────────────────────┬────────────────┐
+│     name     │ rotation_period │ orbital_period │ … │         url          │    _dlt_load_id    │    _dlt_id     │
+│   varchar    │     varchar     │    varchar     │   │       varchar        │      varchar       │    varchar     │
+├──────────────┼─────────────────┼────────────────┼───┼──────────────────────┼────────────────────┼────────────────┤
+│ Tatooine     │ 23              │ 304            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ 9bP2zgmhlmTvjg │
+│ Alderaan     │ 24              │ 364            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ BwPo8tiFIOsljQ │
+│ Yavin IV     │ 24              │ 4818           │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ vVJQYkbCWZCHqA │
+│ Hoth         │ 23              │ 549            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ zyAcHn5iNW58Sw │
+│ Dagobah      │ 23              │ 341            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ nyf8mXX6DPA8Lw │
+│ Bespin       │ 12              │ 5110           │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ 0XRFYa3i4wbsAA │
+│ Endor        │ 18              │ 402            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ x5vBL+5GxihfEg │
+│ Naboo        │ 26              │ 312            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ SYy6n04YeR1gXA │
+│ Coruscant    │ 24              │ 368            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ 1fgKvM9Z0l9Qsg │
+│ Kamino       │ 27              │ 463            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ jSx3FsL14s9f6A │
+│   ·          │ ·               │  ·             │ · │          ·           │         ·          │       ·        │
+│   ·          │ ·               │  ·             │ · │          ·           │         ·          │       ·        │
+│   ·          │ ·               │  ·             │ · │          ·           │         ·          │       ·        │
+│ Mirial       │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ Y5b0cNMOauQZOw │
+│ Serenno      │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ Vkr0kiRlnpJ0DQ │
+│ Concord Dawn │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ r53+erNGTPoJCw │
+│ Zolan        │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ nWxqCteOBlqfEw │
+│ Ojom         │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ 2IyfORAcpViyWA │
+│ Skako        │ 27              │ 384            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ DidfmBmKkX3a1A │
+│ Muunilinst   │ 28              │ 412            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ EmY/0MClN9NkeQ │
+│ Shili        │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ RkKcI+zjOFcgeg │
+│ Kalee        │ 23              │ 378            │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ eJL2ZK9dFxpI9A │
+│ Umbara       │ unknown         │ unknown        │ … │ https://swapi.dev/…  │ 1727349213.4856846 │ AEc0tKC/fEgFEw │
+├──────────────┴─────────────────┴────────────────┴───┴──────────────────────┴────────────────────┴────────────────┤
+│ 60 rows (20 shown)                                                                          14 columns (6 shown) │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
